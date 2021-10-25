@@ -1,0 +1,34 @@
+{
+  "name": "stitches-vs-vanilla-extract",
+  "scripts": {
+    "start": "webpack-dev-server --config ./webpack.dev.js",
+    "build": "webpack build --config ./webpack.prod.js -o ./build"
+  },
+  "dependencies": {
+    "@babel/core": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
+    "@babel/preset-react": "^7.18.6",
+    "@stitches/react": "^1.2.8",
+    "@types/react": "^17.0.47",
+    "@types/react-dom": "^17.0.17",
+    "@vanilla-extract/css": "^1.11.0",
+    "@vanilla-extract/recipes": "^0.4.0",
+    "@vanilla-extract/sprinkles": "^1.6.0",
+    "@vanilla-extract/webpack-plugin": "^2.2.0",
+    "babel-loader": "^9.1.2",
+    "classnames": "^2.3.2",
+    "css-loader": "^6.7.3",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.7.5",
+    "postcss-loader": "^7.2.4",
+    "react": "^18.2.0",
+    "react-code-blocks": "^0.0.9-0",
+    "react-dom": "^18.2.0",
+    "style-loader": "^3.3.2",
+    "ts-loader": "^9.4.2",
+    "typescript": "4.7.4",
+    "webpack": "^5.77.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.13.2"
+  }
+}
