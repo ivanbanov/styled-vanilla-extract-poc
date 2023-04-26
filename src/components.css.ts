@@ -1,4 +1,5 @@
 import { styled } from './styled';
+import { sprinkles } from './sprinkles.css'
 
 export const Box = styled('div', {
   padding: 5,
@@ -7,9 +8,9 @@ export const Box = styled('div', {
 
   variants: {
     foo: {
-      error: { background: 'red' },
-      success: { background: 'green' },
-      info: { background: 'blue' },
+      error: sprinkles({ background: 'error' }),
+      success: sprinkles({ background: 'success' }),
+      info: sprinkles({ background: 'info' }),
     },
     ghost: {
       true: {
@@ -19,6 +20,20 @@ export const Box = styled('div', {
     }
   },
   
+  defaultVariants: {
+    foo: 'error'
+  }
+})
+
+export const Box2 = styled('div', {
+  variants: {
+    foo: {
+      error: sprinkles({
+        background: 'error',
+        color: 'none'
+      }),
+    },
+  },
   defaultVariants: {
     foo: 'error'
   }
