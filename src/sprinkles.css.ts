@@ -2,13 +2,9 @@ import {
   defineProperties,
   createSprinkles
 } from '@vanilla-extract/sprinkles'
+import { vars } from './theme.css'
 
-const space = {
-  none: 0,
-  small: '4px',
-  medium: '8px',
-  large: '16px'
-}
+const space = vars.space
 
 const responsiveProperties = defineProperties({
   conditions: {
@@ -36,14 +32,7 @@ const responsiveProperties = defineProperties({
   }
 })
 
-const colors = {
-  error: 'red',
-  success: 'green',
-  info: 'blue',
-  warning: 'gold',
-  off: 'pink',
-  none: 'white',
-}
+const colors = vars.colors
 
 const colorProperties = defineProperties({
   conditions: {
