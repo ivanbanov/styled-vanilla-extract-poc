@@ -1,6 +1,7 @@
 import { addFunctionSerializer } from '@vanilla-extract/css/functionSerializer'
 import { recipe } from '@vanilla-extract/recipes'
 import { styledRuntime } from './styled.runtime'
+import { sprinkles } from './sprinkles.css'
 
 export function styled(
   element: keyof JSX.IntrinsicElements,
@@ -14,7 +15,7 @@ export function styled(
   } = styles
 
   const recipeFn = recipe({
-    base,
+    base: sprinkles(base),
     variants,
     compoundVariants,
     defaultVariants,

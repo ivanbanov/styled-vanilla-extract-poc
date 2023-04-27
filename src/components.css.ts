@@ -2,9 +2,8 @@ import { styled } from './styled';
 import { sprinkles } from './sprinkles.css'
 
 export const Box = styled('div', {
-  padding: 5,
-  fontSize: 16,
-  color: 'white',
+  padding: 'small',
+  color: 'none',
 
   variants: {
     foo: {
@@ -19,13 +18,13 @@ export const Box = styled('div', {
       }
     }
   },
-  
   defaultVariants: {
     foo: 'error'
   }
 })
 
 export const Box2 = styled('div', {
+  padding: 'small',
   variants: {
     foo: {
       error: sprinkles({

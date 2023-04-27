@@ -16,19 +16,19 @@ const responsiveProperties = defineProperties({
   properties: {
     display: ['none', 'flex', 'block', 'inline'],
     flexDirection: ['row', 'column'],
-    marginTop: space,
-    marginBottom: space,
-    marginLeft: space,
-    marginRight: space
+    paddingTop: space,
+    paddingBottom: space,
+    paddingLeft: space,
+    paddingRight: space
   },
   shorthands: {
-    margin: [
-      'marginTop',
-      'marginBottom',
-      'marginLeft',
-      'marginRight'
+    padding: [
+      'paddingTop',
+      'paddingBottom',
+      'paddingLeft',
+      'paddingRight'
     ],
-    marginX: ['marginLeft', 'marginRight'],
+    paddingX: ['paddingLeft', 'paddingRight'],
   }
 })
 
