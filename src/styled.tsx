@@ -14,9 +14,20 @@ export function styled(
     ...base
   } = styles
 
+  const variantsWithSprinkles = Object.entries(variants)
+    .reduce((resultVariant, [variant, option]) => ({
+      ...resultVariant,
+      // @ts-expect-error
+      [variant]: Object.entries(option).reduce((resultOption, [key, style]) => ({
+        ...resultOption,
+        // @ts-expect-error
+        [key]: sprinkles(style)
+      }), {})
+    }), {})
+
   const recipeFn = recipe({
     base: sprinkles(base),
-    variants,
+    variants: variantsWithSprinkles,
     compoundVariants,
     defaultVariants,
   })

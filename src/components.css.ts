@@ -7,14 +7,13 @@ export const Box = styled('div', {
 
   variants: {
     foo: {
-      error: sprinkles({ background: 'error' }),
-      success: sprinkles({ background: 'success' }),
-      info: sprinkles({ background: 'info' }),
+      error: { background: 'error' },
+      success: { background: 'success' },
+      info: { background: 'info' },
     },
     ghost: {
       true: {
-        border: 'none',
-        opacity: .3,
+        // opacity: .3,
       }
     }
   },
@@ -27,10 +26,10 @@ export const Box2 = styled('div', {
   padding: 'small',
   variants: {
     foo: {
-      error: sprinkles({
+      error: {
         background: 'error',
         color: 'none'
-      }),
+      },
     },
   },
   defaultVariants: {
