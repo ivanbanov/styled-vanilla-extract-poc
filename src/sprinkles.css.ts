@@ -19,7 +19,8 @@ const responsiveProperties = defineProperties({
     paddingTop: space,
     paddingBottom: space,
     paddingLeft: space,
-    paddingRight: space
+    paddingRight: space,
+    opacity: [0, .25, .5, .75, 1],
   },
   shorthands: {
     padding: [
