@@ -4,8 +4,17 @@ import {
 } from '@vanilla-extract/sprinkles'
 import { vars } from './theme.css'
 
-const space = vars.space
-const colors = vars.colors
+const {
+  'border-widths': borderWidths,
+  'colors': colors,
+  'font-sizes': fontSizes,
+  'radii': radii,
+  'shadows': shadows,
+  'sizes': sizes,
+  'space-inset': spaceInset,
+  'space-offset': spaceOffset,
+  'z-indices': zIndices,
+} = vars
 
 const responsiveProperties = defineProperties({
   conditions: {
@@ -15,24 +24,32 @@ const responsiveProperties = defineProperties({
   },
   defaultCondition: 'mobile',
   properties: {
-    display: ['none', 'flex', 'block', 'inline'],
-    flexDirection: ['row', 'column'],
-    paddingTop: space,
-    paddingBottom: space,
-    paddingLeft: space,
-    paddingRight: space,
-    opacity: [0, .25, .5, .75, 1],
+    background: colors,
+    borderRadius: radii,
+    borderWidth: borderWidths,
+    boxShadow: shadows,
     color: colors,
-    background: colors
+    fontSize: fontSizes,
+    height: sizes,
+    margin: spaceOffset,
+    marginBottom: spaceOffset,
+    marginLeft: spaceOffset,
+    marginRight: spaceOffset,
+    marginTop: spaceOffset,
+    opacity: [0, .25, .5, .75, 1],
+    padding: spaceInset,
+    paddingBottom: spaceInset,
+    paddingLeft: spaceInset,
+    paddingRight: spaceInset,
+    paddingTop: spaceInset,
+    width: sizes,
+    zIndex: zIndices,
   },
   shorthands: {
-    padding: [
-      'paddingTop',
-      'paddingBottom',
-      'paddingLeft',
-      'paddingRight'
-    ],
     paddingX: ['paddingLeft', 'paddingRight'],
+    paddingY: ['paddingLeft', 'paddingRight'],
+    marginX: ['marginLeft', 'marginRight'],
+    marginY: ['marginLeft', 'marginRight'],
   }
 })
 
