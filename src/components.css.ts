@@ -1,7 +1,11 @@
 import { styled } from './styled';
 
 export const Box = styled('div', {
-  padding: 'small',
+  padding: {
+    mobile: 'small',
+    tablet: 'medium',
+    desktop: 'large',
+  },
   color: 'none',
 
   variants: {

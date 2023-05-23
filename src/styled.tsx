@@ -1,7 +1,7 @@
 import { addFunctionSerializer } from '@vanilla-extract/css/functionSerializer'
-import { recipe } from '@vanilla-extract/recipes'
+import { recipe } from '@vanilla-extract/recipes' // stitces variants
 import { styledRuntime } from './styled.runtime'
-import { sprinkles } from './sprinkles.css'
+import { sprinkles } from './sprinkles.css' // media and design token access
 
 export function styled(
   element: keyof JSX.IntrinsicElements,

@@ -1,5 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const { VanillaExtractPlugin } = require('@vanilla-extract/webpack-plugin')
 
 module.exports = {
@@ -16,12 +16,7 @@ module.exports = {
         test: /\.vanilla\.css$/i,
         use: [
           MiniCssExtractPlugin.loader,
-          {
-            loader: require.resolve('css-loader'),
-            options: {
-              url: false
-            }
-          }
+          'css-loader'
         ]
       }
     ]
@@ -31,6 +26,6 @@ module.exports = {
       template: './src/index.html'
     }),
     new VanillaExtractPlugin(),
-    new MiniCssExtractPlugin()
+    new MiniCssExtractPlugin(),
   ],
 }

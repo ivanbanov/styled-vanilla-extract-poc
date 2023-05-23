@@ -2,7 +2,7 @@
   "name": "stitches-vs-vanilla-extract",
   "scripts": {
     "start": "webpack-dev-server --config ./webpack.dev.js",
-    "build": "webpack build --config ./webpack.prod.js -o ./build"
+    "build": "webpack build --config ./webpack.prod.js -o ./build && purgecss --css build/main.css --content build/index.html build/main.js --output build/purge.css"
   },
   "dependencies": {
     "@babel/core": "^7.21.4",
@@ -18,9 +18,13 @@
     "babel-loader": "^9.1.2",
     "classnames": "^2.3.2",
     "css-loader": "^6.7.3",
+    "css-minimizer-webpack-plugin": "^5.0.0",
+    "glob": "^10.2.6",
     "html-webpack-plugin": "^5.5.1",
     "mini-css-extract-plugin": "^2.7.5",
     "postcss-loader": "^7.2.4",
+    "purgecss": "^5.0.0",
+    "purgecss-webpack-plugin": "^5.0.0",
     "react": "^18.2.0",
     "react-code-blocks": "^0.0.9-0",
     "react-dom": "^18.2.0",
